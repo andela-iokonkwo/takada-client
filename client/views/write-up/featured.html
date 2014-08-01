@@ -1,0 +1,11 @@
+<div ng-controller="FeaturedWriteCtrl">
+
+<div class="ui-timline-container" >
+
+    <section class="ui-timeline">
+
+        <wr-timeline ng-repeat="write in featuredWrite" data="write" alt = "($index % 2 == 0 && 'alt') || ''"></wr-timeline>
+
+  </section>
+ </div>
+</div>

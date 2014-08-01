@@ -1,0 +1,75 @@
+
+        <form class="form-validation col-md-offset-2 col-md-8">
+
+            <div class="form-group">
+                <label for="">Name</label>
+                <input  type="text"
+                        class="form-control input-round"
+                        required
+                        data-ng-maxlength=50
+                        data-ng-model="form.name"
+                        >
+                <span></span>
+            </div>
+
+            <div class="form-group">
+                <label for="">Email</label>
+                <input  type="email"
+                        class="form-control input-round"
+                        data-ng-maxlength=200
+                        data-ng-model="form.email"
+                        >
+                <span></span>
+            </div>
+
+            <div class="form-group">
+                <label for="">Address</label>
+                <input  type="text"
+                        class="form-control input-round"
+                        data-ng-maxlength=200
+                        data-ng-model="form.address"
+                        >
+                <span></span>
+            </div>
+
+            <div class="form-group">
+                <label for="">Sex</label>
+                <select class="form-control input-round">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <span></span>
+            </div>
+
+            <div class="form-group" data-ng-controller="DatepickerDemoCtrl">
+                <label for="">Date Of Birth</label>
+                <div class="col-sm-10 input-group ui-datepicker">
+                <input type="text"
+                       class="form-control input-round"
+                       datepicker-popup="{{format}}"
+                       ng-model="dt"
+                       is-open="opened"
+                       min="minDate"
+                       max="'2015-06-22'"
+                       datepicker-options="dateOptions"
+                       date-disabled="disabled(date, mode)"
+                       ng-required="true"
+                       close-text="Close">
+                <span class="input-group-addon" ng-click="open($event)"><i class="fa fa-calendar"></i></span>
+                    </div>
+            </div>
+
+            <button type="submit"
+                    class="btn btn-success"
+                    data-ng-disabled="!canSubmit()"
+                    >Submit</button>
+            <button class="btn btn-default"
+                    data-ng-disabled="!canRevert()"
+                    data-ng-click="revert()"
+                    >Revert Changes</button>
+            <div class="callout callout-info">
+                <p>Submit button will be active only when all fields are valid.</p>
+                <p>Revert button will be active only when one or more fields is changed.</p>
+            </div>
+
+        </form>

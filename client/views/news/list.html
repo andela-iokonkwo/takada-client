@@ -1,0 +1,56 @@
+<div class="page page-dashboard" ng-controller="NewsListCtrl">
+    <ol class="breadcrumb-alt">
+        <li><a href="#/dashboard">News</a></li>
+        <li ><a class="active" href="" style="text-transform: uppercase">{{ newsType }}</a></li>
+        <li>
+            <i style="margin-top: 5px" class="fa fa-arrow-right fa-2x"></i>
+        </li>
+        <li>
+            <span style="font-size: 28px"><strong style="margin-top: 10px">{{ title }}</strong></span>
+        </li>
+    </ol>
+<section class="col-md-4">
+    <section class="content-list">
+     <section>
+        <ol class="posts-list">
+            <li ui-sref-active="active"><a  ui-sref=".single({ title: 'professional-ghostwriter-david-meikle-answers-your-questions' })">
+                <h3 class="entry-title">Professional Ghostwriter David Meikle Answers Your Questions</h3>
+                <section class="entry-meta">
+            <span class="status">
+<time datetime="1406566041427" class="date published">
+    Published 1 day ago
+</time>            </span>
+                </section>
+            </a></li>
+
+            <li ui-sref-active="active"><a  ui-sref=".single({ title: 'announcing-the-winners-of-the-character-driven-tale-contest' })">
+                <h3 class="entry-title">Announcing the Winners of the Character-Driven Tale Contest</h3>
+                <section class="entry-meta">
+            <span class="status">
+<time datetime="1406566041427" class="date published">
+    Published 3 days ago
+</time>            </span>
+                </section>
+            </a>
+        </li>
+            <li ui-sref-active="active"><a  ui-sref=".single({ title: 'an-interview-with-author-genevieve-graham' })">
+                <h3 class="entry-title">An interview with author Genevieve Graham</h3>
+                <section class="entry-meta">
+            <span class="status">
+                <time datetime="1406566041427" class="date published">
+                    Published 4 days ago
+                </time>
+            </span>
+                </section>
+            </a>
+        </li>
+        </ol>
+    </section>
+</section>
+
+ </section>
+
+  <section class="col-md-8">
+      <div data-ui-view></div>
+  </section>
+ </div>

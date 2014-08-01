@@ -1,0 +1,54 @@
+
+    <ul class="centre-horizontal list-inline">
+        <li><strong>Genre</strong></li>
+        <li>
+            <select class="form-control" ng-mode="genre">
+                <option ng-repeat="genre in genres">{{ genre }}</option>
+            </select>
+        </li>
+        <li><strong>Type</strong></li>
+        <!-- <li>
+             <input type="text"
+                    ng-model="selected"
+                    typeahead="genre for genre in genres | filter:$viewValue | limitTo:8"
+                    class="form-control"
+                    placeholder="Search">
+         </li>-->
+        <li>
+            <select class="form-control" ng-mode="type">
+                <option ng-repeat="type in types">{{ type }}</option>
+            </select>
+        </li>
+        <li>
+            <button class="btn btn-line-primary">Find</button>
+        </li>
+
+    </ul>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <ul class="list-inline list-unstyled centre-horizontal">
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+                <li><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+
+            </ul>
+        </div>
+    </div>

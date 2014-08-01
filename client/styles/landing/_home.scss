@@ -1,0 +1,58 @@
+
+@import
+"var"                        // global variables
+,   "landing"
+,   "team"
+,   "about"
+,   "services"
+,   "contact"
+,   "contact-us"
+;
+
+.bigintro-light {
+  font-size: 38px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-top: 1px solid $bright;
+  border-bottom: 1px solid $bright;
+  color: $bright;
+  padding: 10px 0;
+}
+
+.bigintro {
+  font-size: 38px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-top: 1px solid $dark;
+  border-bottom: 1px solid $dark;
+  padding: 10px 0;
+}
+
+.divide20 {
+  height: 20px;
+  width: 100%;
+}
+.divide40 {
+  height: 40px;
+  width: 100%;
+}
+.divide55 {
+  height: 55px;
+  width: 100%;
+}
+.divide60 {
+  height: 60px;
+  width: 100%;
+}
+.divide85 {
+  height: 85px;
+  width: 100%;
+}
+.divide90 {
+  height: 90px;
+  width: 100%;
+}

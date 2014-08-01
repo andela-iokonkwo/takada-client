@@ -1,0 +1,61 @@
+.circular {
+  color: $bright;
+  background-color: transparent;
+  border-color: $bright;
+  >img {
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    border: 5px solid $bright;
+  }
+  >p {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    color: #555555;
+    padding: 10px 15px;
+  }
+}
+
+
+.chat-form {
+  background-color: #e7e7e7;
+  clear: both;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 4px;
+}
+.chat-pop {
+  background-color: #f4f4f4;
+  padding: 8px;
+  border-radius: 4px;
+  position: relative;
+  width: 70%;
+}
+.chat-pop .media-heading {
+  font-weight: 400;
+}
+.chat-pop.mod {
+  background-color: #dbdbdb;
+  text-align: right;
+}
+.chat-pop h4 abbr {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.chat-pop h4 i {
+  font-size: 13px;
+}
+.chat-list img {
+  border-radius: 99px;
+}
+/* Chat widget */
+.chat-widget {
+  bottom: 0;
+  position: fixed;
+  right: 20px;
+  width: 400px;
+  z-index: 999;
+}
+.chat-widget .box {
+  margin-bottom: 0px;
+}

@@ -1,0 +1,30 @@
+.team {
+  margin-bottom: 20px;
+  &:hover {
+    color : $bright;
+  }
+
+   >img{
+    height: auto;
+    width: 150px;
+    border-radius: 4px;
+   }
+   >a {
+      &.social {
+         >i {
+           color: #ddd;
+           font-size: 18px;
+           margin-right: 15px;
+           text-decoration: none;
+           &:hover {
+             color: $bright;
+           }
+         }
+      }
+   }
+}
+
+#team {
+  background-color: $gray-dark;
+}
+

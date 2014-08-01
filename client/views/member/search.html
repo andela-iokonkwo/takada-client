@@ -1,0 +1,73 @@
+<div ng-controller="SearchWriteCtrl">
+
+    <div class="">
+        <div class="panel panel-default" >
+            <div class="panel-body">
+                <ul class="list-inline centre-horizontal">
+                    <li>
+                        <ui-select ng-model="person.selected"
+                                   theme="bootstrap"
+                                   ng-disabled="disabled"
+                                   style="min-width: 300px;">
+                            <ui-select-match placeholder="Select or search...">{{$select.selected.title}}</ui-select-match>
+                            <ui-select-choices repeat="w in writeUps track by $index"
+                                               refresh="refreshWriteUps($select.search)"
+                                               refresh-delay="0">
+                                <div class="panel panel-profile">
+                                    <div class="panel-heading bg-primary clearfix">
+                                        <a href="" class="pull-left profile">
+                                            <img alt="" src="{{ w.url }}" class="img-circle img80_80">
+                                        </a>
+                                        <strong class="">By {{ w.author }}</strong>
+                                        <p>{{ w.title }}</p>
+                                        <ul class='list-inline list-unstyled'><li><i class='fa fa-comments'></i></li> <li>21</li><li><i class='fa fa-thumbs-up'></i></li><li>24</li> </ul>
+
+                                    </div>
+                                </div>
+
+
+                            </ui-select-choices>
+                        </ui-select>
+
+                    </li>
+                    <li>
+                        <a href="" class="btn btn-line-primary"><i class="glyphicon glyphicon-search"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div >
+        <ul class="list-inline list-unstyled centre-horizontal">
+
+            <li>
+                <ui-member url="images/g1.jpg" size="120" name="Ikem Okonkwo" color="success" tooltip="ikem Okonkwo"></ui-member>
+            </li>
+
+            <li>
+                <ui-member url="images/g1.jpg" size="120" name="Ikem Okonkwo" color="success" tooltip="ikem Okonkwo"></ui-member>
+            </li>
+
+            <li>
+                <ui-member url="images/g1.jpg" size="120" name="Ikem Okonkwo" color="success" tooltip="ikem Okonkwo"></ui-member>
+            </li>
+
+            <li>
+                <ui-member url="images/g1.jpg" size="120" name="Ikem Okonkwo" color="success" tooltip="ikem Okonkwo"></ui-member>
+            </li>
+
+            <li>
+                <ui-member url="images/g1.jpg" size="120" name="Ikem Okonkwo" color="success" tooltip="ikem Okonkwo"></ui-member>
+            </li>
+
+            <li>
+                <ui-member url="images/g1.jpg" size="120" name="Ikem Okonkwo" color="success" tooltip="ikem Okonkwo"></ui-member>
+            </li>
+
+
+        </ul>
+
+    </div>
+</div>

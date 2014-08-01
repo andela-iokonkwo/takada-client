@@ -1,0 +1,92 @@
+<div ng-controller="SearchWriteCtrl">
+
+    <div class="">
+        <div class="panel panel-default" >
+            <div class="panel-body">
+                <ul class="list-inline centre-horizontal">
+                    <li>
+                        <ui-select ng-model="person.selected"
+                                   theme="bootstrap"
+                                   ng-disabled="disabled"
+                                   style="min-width: 300px;">
+                            <ui-select-match placeholder="Select or search...">{{$select.selected.title}}</ui-select-match>
+                            <ui-select-choices repeat="w in writeUps track by $index"
+                                               refresh="refreshWriteUps($select.search)"
+                                               refresh-delay="0">
+                                <div class="panel panel-profile">
+                                    <div class="panel-heading bg-primary clearfix">
+                                        <a href="" class="pull-left profile">
+                                            <img alt="" src="{{ w.url }}" class="img-circle img80_80">
+                                        </a>
+                                        <strong class="">By {{ w.author }}</strong>
+                                        <p>{{ w.title }}</p>
+                                        <ul class='list-inline list-unstyled'><li><i class='fa fa-comments'></i></li> <li>21</li><li><i class='fa fa-thumbs-up'></i></li><li>24</li> </ul>
+
+                                    </div>
+                                </div>
+
+
+                            </ui-select-choices>
+                        </ui-select>
+
+                    </li>
+                    <li>
+                        <a href="" class="btn btn-line-primary"><i class="glyphicon glyphicon-search"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div >
+        <ul class="list-inline list-unstyled centre-horizontal">
+
+            <li>
+                <div tooltip="Description" tooltip-placement="bottom">
+                    <ui-group url="images/g1.jpg" name="Ikem Okonkwo" color="success" tooltip="Tags Khhnnhj"></ui-group>
+                </div>
+            </li>
+
+            <li>
+                <div tooltip="Description" tooltip-placement="bottom">
+                    <ui-group url="images/g1.jpg" name="Ikem Okonkwo" color="primary" tooltip="Tags Khhnnhj"></ui-group>
+                </div>
+            </li>
+
+            <li>
+                <div tooltip="Description" tooltip-placement="bottom">
+                    <ui-group url="images/g1.jpg" name="Ikem Okonkwo" color="primary" tooltip="Tags Khhnnhj"></ui-group>
+                </div>
+            </li>
+
+            <li>
+                <div tooltip="Description" tooltip-placement="bottom">
+                    <ui-group url="images/g1.jpg" name="Depraved insight" color="primary" tooltip="Tags Khhnnhj"></ui-group>
+                </div>
+            </li>
+            <li>
+                <div tooltip="Description" tooltip-placement="bottom">
+                    <ui-group url="images/g1.jpg" name="Scene Craft" color="primary" tooltip="Tags Khhnnhj"></ui-group>
+                </div>
+            </li>
+
+            <li>
+                <div tooltip="Description" tooltip-placement="bottom">
+                    <ui-group url="images/g1.jpg" name="Unraveled" color="primary" tooltip="Tags Khhnnhj"></ui-group>
+                </div>
+            </li>
+            <li>
+                <div tooltip="Description" tooltip-placement="bottom">
+                    <ui-group url="images/g1.jpg" name="I heart crits" color="primary" tooltip="Tags Khhnnhj"></ui-group>
+                </div>
+            </li>
+            <li>
+                <div tooltip="Description is a Dynamic ekhdhjk" tooltip-placement="bottom">
+                    <ui-group url="images/g1.jpg" name="It's a start" color="primary" tooltip="Tags Khhnnhj"></ui-group>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>

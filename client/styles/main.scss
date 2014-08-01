@@ -1,0 +1,43 @@
+
+@import 
+    "global/var"                        // global variables
+,   "bootstrap-sass/bootstrap"          // Bootstrap, Note: files that has CONTENT changed are "_variables.scss", "_grid.scss", "_mixins.scss" (make-grid-columns())
+,   "bourbon/bourbon"                   // mixins
+
+  // UI, uses Bootstrap's variables
+,   "ui/ui"
+
+  // Landing Page style
+,   "landing/home"
+
+    // Plugins, overrides plugins' style
+,   "plugins/bootstrap-slider"
+,   "plugins/angular-ui-select"
+,   "plugins/toastr"
+,   "plugins/sparkline"
+,   "plugins/angular-ui-tree"
+,   "plugins/ng-tags-input"
+,   "plugins/intro"
+
+    // Pages
+,   "global/var-pages"
+,   "user/dashboard"
+,   "news/list"
+,   "user/pages"
+,   "error/err"
+,   "user/lock-screen"
+,   "user/auth"
+,   "user/profile"
+,   "user/signin-signup"
+,   "user/forgot-password"
+
+    // sections
+,   "sections/layouts"
+,   "sections/shared"
+,   "sections/nav"
+,   "sections/nav-off-canvas"
+,   "sections/nav-horizontal"
+,   "sections/nav-min"
+,   "sections/header"
+,   "sections/body"
+;

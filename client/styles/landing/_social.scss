@@ -1,0 +1,28 @@
+.socialbar {
+  color: $dark;
+  background-color: #f2f4f8;
+  padding-bottom: 10px;
+  text-decoration: none !important;
+  >a {
+    &:hover,:focus {
+      text-decoration: none !important;
+    }
+  }
+  >i {
+    &.darkred {
+      color: $dark;
+      transition: all 0.2s ease-out 0s;
+    }
+    &.darkred:hover {
+      cursor: pointer;
+      color: $brand-primary;
+    }
+  }
+}
+
+.bm10 {
+  margin-bottom: 10px !important;
+}
+.rm20 {
+  margin-right: 20px;
+}

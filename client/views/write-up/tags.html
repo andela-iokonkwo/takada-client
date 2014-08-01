@@ -1,0 +1,14 @@
+<div ng-controller="TagWriteCtrl">
+<div class="list-inline centre-horizontal">
+    <button type="button"
+            class="btn btn-line-primary"
+            style="margin-bottom: 10px; margin-right: 10px"
+            ng-repeat="tag in tags">{{ tag }}</button>
+</div>
+
+    <section class="ui-timeline">
+
+        <wr-timeline ng-repeat="write in tagWrite" data="write" alt = "($index % 2 == 0 && 'alt') || ''"></wr-timeline>
+
+    </section>
+</div>

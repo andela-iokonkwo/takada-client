@@ -1,0 +1,18 @@
+.form-input {
+  margin-bottom: 15px;
+}
+.form-submit {
+  text-align: center;
+  margin-top: 5px;
+  .btn {
+    width: 100%;
+  }
+}
+
+.contact {
+  background-color: $brand-primary;
+  .space {
+    height: 60px;
+    width: 100%;
+  }
+}
