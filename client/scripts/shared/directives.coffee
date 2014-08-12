@@ -71,7 +71,7 @@ angular.module('app.directives', [])
                     <div class="tl-entry">
                         <div class="wr-icon"><a href=""><img class="img-circle img-responsive" src="{{ data.url }}"></a></div>
                         <div class="tl-content">
-                            <a href=""> <h4 class="tl-tile">{{ data.title }}</h4></a>
+                            <a href="#/write-ups/any-write-up"> <h4 class="tl-tile">{{ data.title }}</h4></a>
                             <h5><strong>By <a href="">{{ data.author }}</a></strong></h5>
                             <ul class="list-inline list-unstyled">
                                 <li><div class="round-icon sm bg-warning"><i class="fa fa-comments"></i></div></li>

@@ -562,7 +562,7 @@
           alt: '='
         },
         replace: true,
-        template: '<article class="tl-item {{ alt }}"> <div class="tl-body"> <div class="tl-entry"> <div class="wr-icon"><a href=""><img class="img-circle img-responsive" src="{{ data.url }}"></a></div> <div class="tl-content"> <a href=""> <h4 class="tl-tile">{{ data.title }}</h4></a> <h5><strong>By <a href="">{{ data.author }}</a></strong></h5> <ul class="list-inline list-unstyled"> <li><div class="round-icon sm bg-warning"><i class="fa fa-comments"></i></div></li> <li><div class="round-icon sm bg-bright"><strong>{{ data.comments }}</strong></div></li> <li><div class="round-icon sm bg-success"><i class="fa fa-thumbs-up"></i></div></li> <li><div class="round-icon sm bg-bright"><strong>{{ data.likes }}</strong></div></li> </ul> </div> </div> </div> </article>'
+        template: '<article class="tl-item {{ alt }}"> <div class="tl-body"> <div class="tl-entry"> <div class="wr-icon"><a href=""><img class="img-circle img-responsive" src="{{ data.url }}"></a></div> <div class="tl-content"> <a href="#/write-ups/any-write-up"> <h4 class="tl-tile">{{ data.title }}</h4></a> <h5><strong>By <a href="">{{ data.author }}</a></strong></h5> <ul class="list-inline list-unstyled"> <li><div class="round-icon sm bg-warning"><i class="fa fa-comments"></i></div></li> <li><div class="round-icon sm bg-bright"><strong>{{ data.comments }}</strong></div></li> <li><div class="round-icon sm bg-success"><i class="fa fa-thumbs-up"></i></div></li> <li><div class="round-icon sm bg-bright"><strong>{{ data.likes }}</strong></div></li> </ul> </div> </div> </div> </article>'
       };
     }
   ]).directive('customPage', function() {
