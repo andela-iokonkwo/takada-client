@@ -35,7 +35,9 @@
     "flot.tooltip": "~0.6.7",
     "masonry": "~3.1.5",
     "angular-masonry": "~0.9.0",
-    "ngInfiniteScroll": "~1.1.2"
+    "ngInfiniteScroll": "~1.1.2",
+    "moment": "~2.8.1",
+    "angular-moment": "~0.8.0"
   },
   "resolutions": {
     "intro.js": "~0.8.0"

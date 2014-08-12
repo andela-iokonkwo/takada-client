@@ -11,6 +11,7 @@ angular.module('app.controllers', [])
         $scope.main =
             brand: 'Takada'
             name: 'Ikem Okonkwo' # those which uses i18n directive can not be replaced for now.
+            slug: 'ikem-okonkwo'
 
         $scope.admin =
             layout: 'boxed'          # 'boxed', 'wide'

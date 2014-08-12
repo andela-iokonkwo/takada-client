@@ -1,47 +1,109 @@
-<div class="panel panel-default" ng-controller="FeaturedBookCtrl" style="margin-bottom: 300px; margin-left: 30px">
-    <div class="panel-body">
-<ul class="list-inline list-unstyled centre-horizontal">
+<div id="shelf" class="table-responsive">
+    <table id="shelfTable" class="{{ shelfSize }}" border="0" cellpadding="0" cellspacing="0" ng-init="shelfSize = 'small'; size='65px'">
+        <tr>
+            <td class="right" rowspan="4">&nbsp;
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}"><a href="" ng-click="bookClick()">
-        <img style="height: 220px; width: 150px" src="images/book.jpg" alt="" class="img-responsive" >
-    </a>
-    </li>
+            </td>
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}" >
-        <a href="" ng-click="bookClick()">
-        <img style="height: 220px; width: 150px" src="images/book.jpg" alt="" class="img-responsive">
-    </a>
-    </li>
+            <td class="view" colspan="3">
+                    <span class="size">
+                        <a href="" ng-click="shelfSize = 'small'; size = '65px'" id="small" class="small"><img src="http://www.shelfari.com/img/b.png" alt="Show Small Shelf" title="Show Small Shelf" /></a>
+                        <a href="" ng-click="shelfSize = 'medium'; size = '85px'" id="medium" class="medium"><img src="http://www.shelfari.com/img/b.png" alt="Show Medium Shelf" title="Show Medium Shelf" /></a>
+                        <a href="" ng-click="shelfSize = 'large'; size = '115px'" id="large" class="large"><img src="http://www.shelfari.com/img/b.png" alt="Show Large Shelf" title="Show Large Shelf" /></a>
+                    </span>
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}"><a href="" ng-click="bookClick()">
-        <img style="height: 220px; width: 150px" src="images/book.jpg" alt="" class="img-responsive">
-    </a>
-    </li>
+                    <span class="sort">
+                    </span>
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}"><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+                    <span class="pagination">
+                        <span></span>
+                        <a href="" class="first"><img src="http://www.shelfari.com/img/b.png" alt="Go to First Page" title="Go to First Page" /></a>
+                        <a href="" class="previous"><img src="http://www.shelfari.com/img/b.png" alt="Go to Previous Page" title="Go to Previous Page" /></a>
+                        <a href="" class="next"><img src="http://www.shelfari.com/img/b.png" alt="Go to Next Page" title="Go to Next Page" /></a>
+                        <a href="" class="last"><img src="http://www.shelfari.com/img/b.png" alt="Go to Last Page" title="Go to Last Page" /></a>
+                    </span>
+            </td>
+            <td class="right" rowspan="4">&nbsp;</td>
+        </tr>
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}"><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
+        <tr class="m">
+            <td class="l">&nbsp;<span></span>
+            </td>
+            <td class="c">
+                <div id="bookContainer" class="mask" style="height: 400px;width:100%;">
+                    <div class="row" style="">
+                        <div class="item" style="width: {{ size }}">
+                            <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                        </div>
+                        <div class="item" style="width: {{ size }}">
+                            <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                        </div>
+                        <div class="item" style="width: {{ size }}}">
+                            <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                        </div>
+                        <div class="item" style="width: {{ size }}">
+                            <div class="book bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                    </div>
+                    <div class="item" style="width: {{ size }}}">
+                        <div class="book" bookid="14326913"  editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                    </div>
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}"><a href="" ng-click="bookClick()">
-        <img style="height: 220px; width: 150px" src="images/book.jpg" alt="" class="img-responsive" >
-    </a>
-    </li>
+                </div>
+                <div class="rowclear" style="height: 0; clear: both; overflow: hidden;"></div>
+                <div class="row">
+                    <div class="item" style="width: {{ size }}}">
+                        <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                    </div>
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}" >
-        <a href="" ng-click="bookClick()">
-            <img style="height: 220px; width: 150px" src="images/book.jpg" alt="" class="img-responsive">
-        </a>
-    </li>
+                    <div class="item" style="width: {{ size }}">
+                        <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                    </div>
+                    <div class="item" style="width: {{ size }}">
+                        <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                    </div>
+                    <div class="item" style="width: {{ size }}}">
+                        <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                    </div>
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}"><a href="" ng-click="bookClick()">
-        <img style="height: 220px; width: 150px" src="images/book.jpg" alt="" class="img-responsive">
-    </a>
-    </li>
+                    <div class="item" style="width: {{ size }}">
+                        <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                    </div>
+                </div>
+                <div class="rowclear" style="height: 0; clear: both; overflow: hidden;"></div>
+                <div class="row">
+                    <div class="item" style="width: {{ size }}">
+                        <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                    </div>
+                    <div class="item" style="width: {{ size }}}">
+                        <div class="book" bookid="14326913" editionid="24717725"><a href="http://www.shelfari.com/books/14326913/The-Spice-Necklace" viewerblisttypes="2"><span class="badges"><span class="new"></span></span><span class="cover" style="width:107px"></span><span class="edge"></span><img src="http://ecx.images-amazon.com/images/I/51shq5J6hfL._SL160.jpg" alt="The Spice Necklace" title="The Spice Necklace"></a></div>
+                    </div>
+                </div>
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}"><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
 
-    <li popover-placement="bottom" popover-html-unsafe="{{ content }}"><ui-book url="images/book.jpg"  author="Jk Rowlings"  title="Harry Potter 6"></ui-book></li>
-
-</ul>
-    </div>
 </div>
+</td>
+<td class="r">&nbsp;</td>
+</tr>
+
+<tr class="b">
+    <td class="l">&nbsp;</td>
+    <td class="c">&nbsp;</td>
+    <td class="r">&nbsp;</td>
+</tr>
+
+<tr>
+    <td class="view" colspan="3">
+                    <span class="reorder">
+                        <a class="hide" href="javascript:{}"><img src="http://www.shelfari.com/img/b.png" alt="Reorder Books" title="Reorder Books" /></a>&nbsp;
+                    </span>
+        <span id="reorderInstructions" class="hide" style="background: none;">Drag &amp; drop books into the desired order, or onto a book list</span>
+                    <span class="pagination">
+                        <span></span>
+                        <a href="javascript:{}" class="first"><img src="http://www.shelfari.com/img/b.png" alt="Go to First Page" title="Go to First Page" /></a>
+                        <a href="javascript:{}" class="previous"><img src="http://www.shelfari.com/img/b.png" alt="Go to Previous Page" title="Go to Previous Page" /></a>
+                        <a href="javascript:{}" class="next"><img src="http://www.shelfari.com/img/b.png" alt="Go to Next Page" title="Go to Next Page" /></a>
+                        <a href="javascript:{}" class="last"><img src="http://www.shelfari.com/img/b.png" alt="Go to Last Page" title="Go to Last Page" /></a>
+                    </span>
+    </td>
+</tr>
+</table>

@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('app', ['ngAnimate', 'ui.router', 'angularSmoothscroll', 'ui.bootstrap', 'textAngular', 'ngTagsInput', 'angular-intro', 'ngSanitize', 'ui.select', 'app.controllers', 'app.directives', 'app.filters', 'app.localization', 'app.nav', 'app.service', 'app.task', 'book.controllers', 'dashboard.controllers', 'group.controllers', 'member.controllers', 'user.controllers', 'write.controllers', 'news.controllers']).config([
+  angular.module('app', ['ngAnimate', 'ui.router', 'angularSmoothscroll', 'ui.bootstrap', 'textAngular', 'ngTagsInput', 'angular-intro', 'ngSanitize', 'ui.select', 'angularMoment', 'app.controllers', 'app.directives', 'app.filters', 'app.localization', 'app.nav', 'app.service', 'app.task', 'book.controllers', 'dashboard.controllers', 'group.controllers', 'member.controllers', 'user.controllers', 'write.controllers', 'news.controllers']).config([
     '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
       $stateProvider.state('landing', {
         url: '',
@@ -23,17 +23,18 @@
       }).state('a', {
         abstract: true,
         templateUrl: 'views/account.html'
-      }).state('a.prodit', {
+      }).state('a.profile', {
         abstract: true,
+        url: '/profile',
         templateUrl: 'views/user/edit-profile.html'
-      }).state('a.prodit.basic', {
-        url: 'account/profile',
+      }).state('a.profile.basic', {
+        url: '/basic',
         templateUrl: 'views/user/basic.html'
-      }).state('a.prodit.more', {
-        url: 'account/profile',
+      }).state('a.profile.more', {
+        url: '/more-detail',
         templateUrl: 'views/user/more.html'
-      }).state('a.prodit.pics', {
-        url: 'account/profile',
+      }).state('a.profile.pics', {
+        url: '/picture',
         templateUrl: 'views/user/picture.html'
       }).state('a.dashboard', {
         abstract: true,
@@ -164,6 +165,42 @@
       }).state('a.single-member', {
         url: '/members/{name}',
         templateUrl: 'views/member/single.html'
+      }).state('a.single-member.profile', {
+        url: '/profile',
+        templateUrl: 'views/my/profile.html'
+      }).state('a.single-member.groups', {
+        url: '/groups',
+        templateUrl: 'views/my/groups.html'
+      }).state('a.my-group.joined', {
+        url: '/i-joined',
+        templateUrl: 'views/my/groups-joined.html'
+      }).state('a.my-group.owed', {
+        url: '/i-owed',
+        templateUrl: 'views/my/groups-owed.html'
+      }).state('a.single-member.people', {
+        url: '/members',
+        templateUrl: 'views/my/people.html'
+      }).state('a.my-people.followers', {
+        url: '/followers',
+        templateUrl: 'views/my/people-followers.html'
+      }).state('a.my-people.following', {
+        url: '/following',
+        templateUrl: 'views/my/people-following'
+      }).state('a.single-member.shelf', {
+        url: '/shelf',
+        templateUrl: 'views/my/shelf.html'
+      }).state('a.my-shelf.read', {
+        url: '/have-read',
+        templateUrl: 'views/my/shelf-have-read.html'
+      }).state('a.my-shelf.reading', {
+        url: '/reading',
+        templateUrl: 'views/my/shelf-reading'
+      }).state('a.my-shelf.plan', {
+        url: '/plan-to-read',
+        templateUrl: 'views/my/shelf-plan-to-read.html'
+      }).state('a.single-member.works', {
+        url: '/works',
+        templateUrl: 'views/my/works.html'
       }).state('a.news-type', {
         url: '/news/{type:(?:featured|latest|tags)}',
         templateUrl: 'views/news/list.html'
@@ -306,7 +343,8 @@
       $window = $(window);
       $scope.main = {
         brand: 'Takada',
-        name: 'Ikem Okonkwo'
+        name: 'Ikem Okonkwo',
+        slug: 'ikem-okonkwo'
       };
       $scope.admin = {
         layout: 'boxed',
@@ -476,7 +514,7 @@
           bookClick: '&'
         },
         replace: true,
-        template: '<a href="" ng-click="bookClick()"> <img style="height: 220px; width: 150px" src="{{ url }}" alt="" class="img-responsive" /> </a>'
+        template: '<a href="#/books/any-book" ng-click="bookClick()"> <img style="height: 220px; width: 150px" src="{{ url }}" alt="" class="img-responsive" /> </a>'
       };
     }
   ]).directive('ulSlider', [
@@ -498,7 +536,7 @@
           color: '@'
         },
         replace: true,
-        template: '<section class="panel panel-box" style="width: 150px;height: 150px"> <div class="panel-top bg-{{ color }}"> <a href=""><img class="img-responsive" src="{{ url }}"></a> </div> <div class="panel-bottom bg-reverse"> <a href=""><strong>{{ name }}</strong></a> </div> </section>'
+        template: '<section class="panel panel-box" style="width: 150px;height: 150px"> <div class="panel-top bg-{{ color }}"> <a href="#/groups/any-group"><img class="img-responsive" src="{{ url }}"></a> </div> <div class="panel-bottom bg-reverse"> <a href="#/groups/any-group"><strong>{{ name }}</strong></a> </div> </section>'
       };
     }
   ]).directive('uiMember', [
@@ -512,7 +550,7 @@
           size: '@'
         },
         replace: true,
-        template: '<section class="panel panel-box" style="width: {{ size }}px;height: {{ size }}px"> <div class="panel-top bg-{{ color }}"> <a href=""><img class="img-responsive" src="{{ url }}"></a> </div> </section>'
+        template: '<section class="panel panel-box" style="width: {{ size }}px;height: {{ size }}px"> <div class="panel-top bg-{{ color }}"> <a href="#/members/{{main.name}}/profile"><img class="img-responsive" src="{{ url }}"></a> </div> </section>'
       };
     }
   ]).directive('wrTimeline', [
@@ -1424,8 +1462,59 @@ angular.module('write.service', [])
  * Created by DEYOUNG on 27/07/14.
  */
 angular.module('news.controllers', ['news.service'])
-    .controller('NewsListCtrl',['$scope', '$stateParams','$rootScope', function($scope, $stateParams, $rootScope){
+    .controller('NewsListCtrl',['$scope', '$stateParams','$rootScope', 'allNews', function($scope, $stateParams, $rootScope, allNews){
         $scope.newsType = $stateParams.type;
+        $scope.tags = [];
+        $scope.news = [];
+        $scope.currentNews = null;
+        $scope.selectedTag = null;
+        $scope.newsMeta = null;
+
+        var getNews = function(page){
+            allNews[$scope.newsType](page).then(function(result){
+                console.log(result);
+                $scope.news = result.data.posts;
+                $scope.newsMeta = result.data.meta;
+                $scope.currentNews = result.data.posts[1];
+            }, function(err){
+                console.log(err);
+            });
+        }
+
+        var news = function(){
+            if($scope.newsType == 'tags'){
+                allNews.getTags().then(function(result){
+                    $scope.tags = result.data;
+                    console.log(result.data.tags);
+                    allNews.tag = result.data.tags[4].slug;
+                    $scope.selectedTag = result.data.tags[1].slug;
+
+                }).then(function(data){
+                        getNews(1)
+                    })
+            }
+            else
+                getNews(1);
+        }
+
+        if(allNews.token == null){
+            allNews.authenticate().then(function(result){
+                allNews.token = result.data;
+                console.log(result);
+            }).then(function(){
+                    news();
+            })
+        }
+        else {
+            news();
+        }
+
+        $scope.newsClick = function(news){
+            $scope.currentNews = news;
+            allNews.currentNews =  news;
+            console.log(news);
+        }
+
         console.log($stateParams);
         $scope.title = "";
         if(!angular.isUndefined($stateParams.title)){
@@ -1437,14 +1526,59 @@ angular.module('news.controllers', ['news.service'])
                 if(!angular.isUndefined(toParams.title)){
                     var i = toParams.title.replace(/-/g, " ");
                     $scope.title = i.toUpperCase();
+                    $scope.newsType = toParams.type;
                 }
                // str.replace(/blue/g, "red");
             })
 
-        // console.log(6 % 2)
     }])
+     .controller('SingleNewsCtrl',['$scope', '$stateParams','$rootScope', 'allNews', function($scope, $stateParams, $rootScope, allNews){
+        $scope.content = allNews.currentNews;
+     }])
+
 ;
 /**
  * Created by DEYOUNG on 27/07/14.
  */
 angular.module('news.service', [])
+.factory('allNews',['$http', function($http) {
+       var baseUrl = 'http://news-takada.azurewebsites.net/ghost/api/v0.1/';
+
+        return {
+            tag : null,
+
+            limit : 5,
+
+            token : null,
+
+            currentNews : null,
+
+            authenticate : function(){
+                return $http.post(baseUrl + 'authentication/token',
+                    'grant_type=password&username=dyoungikem@gmail.com&password=elivong619&client_id=ghost-admin',
+                    {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
+            },
+
+            featured : function(page){
+               // return $http.json(baseUrl + 'posts/?featured=true&page=' + page + '&limit=' + this.limit);
+                return $http.get(baseUrl + 'posts/?featured=true&page=' + page + '&limit=' + this.limit,
+                    {headers: {'Authorization': 'Bearer ' + this.token.access_token}});
+            },
+
+            latest : function(page){
+                return $http.get(baseUrl + 'posts/?page=' + page + '&limit=' + this.limit,
+                    {headers: {'Authorization': 'Bearer ' + this.token.access_token}});
+            },
+
+            tags : function(page){
+                return $http.get(baseUrl + 'posts/?page=' + page + '&limit=' + this.limit + '&tag=' + this.tag,
+                    {headers: {'Authorization': 'Bearer ' + this.token.access_token}});
+            },
+
+            getTags : function(){
+                return $http.get(baseUrl + 'tags/', {headers: {'Authorization': 'Bearer ' + this.token.access_token}});
+
+            }
+        }
+
+    }])

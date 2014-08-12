@@ -18,7 +18,7 @@ angular.module('app.directives', [])
         restrict: 'AE'
         scope: {url: '@', author: '@', title: '@', bookClick: '&'},
         replace: true,
-        template: '<a href="" ng-click="bookClick()">
+        template: '<a href="#/books/any-book" ng-click="bookClick()">
                     <img style="height: 220px; width: 150px" src="{{ url }}" alt="" class="img-responsive" />
                     </a>'
     }
@@ -39,10 +39,10 @@ angular.module('app.directives', [])
     replace: true,
     template:'<section class="panel panel-box" style="width: 150px;height: 150px">
             <div class="panel-top bg-{{ color }}">
-                <a href=""><img class="img-responsive" src="{{ url }}"></a>
+                <a href="#/groups/any-group"><img class="img-responsive" src="{{ url }}"></a>
             </div>
             <div class="panel-bottom bg-reverse">
-                <a href=""><strong>{{ name }}</strong></a>
+                <a href="#/groups/any-group"><strong>{{ name }}</strong></a>
               </div>
             </section>'
     }
@@ -55,7 +55,7 @@ angular.module('app.directives', [])
     replace: true,
     template:'<section class="panel panel-box" style="width: {{ size }}px;height: {{ size }}px">
                 <div class="panel-top bg-{{ color }}">
-                    <a href=""><img class="img-responsive" src="{{ url }}"></a>
+                    <a href="#/members/{{main.name}}/profile"><img class="img-responsive" src="{{ url }}"></a>
                 </div>
               </section>'
     }

@@ -15,7 +15,7 @@
         <span class="icon-bar"></span>
     </div>
 
-    <div class="top-nav">
+    <div class="top-nav pull-right">
         <ul class="nav-left list-unstyled">
             <li>
                 <a href="#/" data-toggle-nav-collapsed-min
@@ -24,63 +24,7 @@
                              ><i class="fa fa-bars"></i></a>
             </li>
 
-            <li class="dropdown text-normal nav-profile">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="images/g1.jpg" alt="" class="img-circle img30_30">
-                        <span data-i18n="Ikem Okonkwo"></span>
-            </a>
-            <ul class="dropdown-menu with-arrow">
-                <li>
-                    <a ui-sref=".prodit.basic">
-                        <i class="fa fa-user"></i>
-                        <span data-i18n="Edit Profile"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/members/ikem-okonkwo">
-                        <i class="fa fa-user"></i>
-                        <span data-i18n="View Profile"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/pages/edit-profile">
-                        <i class="fa fa-user"></i>
-                        <span data-i18n="My Shelf"></span>
-                    </a>
-                </li>
 
-                <li>
-                    <a href="#/tasks/tasks">
-                        <i class="fa fa-group"></i>
-                        <span data-i18n="My Groups"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/tasks/tasks">
-                        <i class="fa fa-pencil"></i>
-                        <span data-i18n="My Posted Works"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/tasks/tasks">
-                        <i class="fa fa-smile-o"></i>
-                        <span data-i18n="My Followers"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/lock">
-                        <i class="fa fa-lock"></i>
-                        <span data-i18n="Lock"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/pages/signin">
-                        <i class="fa fa-sign-out"></i>
-                        <span data-i18n="Log Out"></span>
-                    </a>
-                </li>
-            </ul>
-            </li>
 <!--             <li class="dropdown">
                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                     <span class="fa fa-magic nav-icon"></span>
@@ -91,48 +35,69 @@
             </li> -->
 
         </ul>
-        
-
 <!--
-        <ul class="nav-right pull-right list-unstyled">
-            <li class="dropdown">
-                <a href="javascript:;" class="dropdown-toggle bg-info" data-toggle="dropdown">
-                    <i class="fa fa-comment-o"></i>
-                    <span class="badge badge-info">2</span>
+        <ul class="pull-right list-unstyled">
+            <li class="dropdown text-normal nav-profile">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="images/g1.jpg" style="margin:10px 5px" alt="" class="img-circle img30_30">
+                    <span data-i18n="Ikem Okonkwo"></span>
                 </a>
-                <div class="dropdown-menu pull-right with-arrow panel panel-default">
-                    <div class="panel-heading">
-                        You have 2 messages.
-                    </div>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="javascript:;" class="media">
-                                <span class="pull-left media-icon">
-                                    <span class="round-icon sm bg-info"><i class="fa fa-comment-o"></i></span>
-                                </span>
-                                <div class="media-body">
-                                    <span class="block">Jane sent you a message</span>
-                                    <span class="text-muted">3 hours ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="javascript:;" class="media">
-                                <span class="pull-left media-icon">
-                                    <span class="round-icon sm bg-danger"><i class="fa fa-comment-o"></i></span>
-                                </span>
-                                <div class="media-body">
-                                    <span class="block">Lynda sent you a mail</span>
-                                    <span class="text-muted">9 hours ago</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="panel-footer">
-                        <a href="javascript:;">Show all messages.</a>
-                    </div>
-                </div>
+                <ul class="dropdown-menu with-arrow">
+                    <li>
+                        <a ui-sref="a.profile.basic">
+                            <i class="fa fa-user"></i>
+                            <span data-i18n="Edit Profile"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/members/{{main.name}}/profile">
+                            <i class="fa fa-user"></i>
+                            <span data-i18n="View Profile"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/members/{{main.name}}/shelf">
+                            <i class="fa fa-user"></i>
+                            <span data-i18n="My Shelf"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#/members/{{main.name}}/groups">
+                            <i class="fa fa-group"></i>
+                            <span data-i18n="My Groups"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/members/{{main.name}}/works">
+                            <i class="fa fa-pencil"></i>
+                            <span data-i18n="My Posted Works"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/members/{{main.name}}/members">
+                            <i class="fa fa-smile-o"></i>
+                            <span data-i18n="My Followers"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/lock">
+                            <i class="fa fa-lock"></i>
+                            <span data-i18n="Lock"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/signin">
+                            <i class="fa fa-sign-out"></i>
+                            <span data-i18n="Log Out"></span>
+                        </a>
+                    </li>
+                </ul>
             </li>
+        </ul>
+-->
+        <ul class="nav-right pull-right list-unstyled">
+
             <li class="dropdown">
                 <a href="javascript:;" class="dropdown-toggle bg-success" data-toggle="dropdown">
                     <i class="fa fa-envelope-o"></i>
@@ -140,7 +105,7 @@
                 </a>
                 <div class="dropdown-menu pull-right with-arrow panel panel-default">
                     <div class="panel-heading">
-                        You have 3 mails.
+                        You have 3 messages.
                     </div>
                     <ul class="list-group">
                         <li class="list-group-item">
@@ -149,7 +114,7 @@
                                     <span class="round-icon sm bg-warning"><i class="fa fa-envelope-o"></i></span>
                                 </span>
                                 <div class="media-body">
-                                    <span class="block">Lisa sent you a mail</span>
+                                    <span class="block">Lisa sent you a message</span>
                                     <span class="text-muted block">2min ago</span>
                                 </div>
                             </a>
@@ -160,7 +125,7 @@
                                     <span class="round-icon sm bg-info"><i class="fa fa-envelope-o"></i></span>
                                 </span>
                                 <div class="media-body">
-                                    <span class="block">Jane sent you a mail</span>
+                                    <span class="block">Jane sent you a message</span>
                                     <span class="text-muted">3 hours ago</span>
                                 </div>
                             </a>
@@ -171,14 +136,14 @@
                                     <span class="round-icon sm bg-success"><i class="fa fa-envelope-o"></i></span>
                                 </span>
                                 <div class="media-body">
-                                    <span class="block">Lynda sent you a mail</span>
+                                    <span class="block">Lynda sent you a message</span>
                                     <span class="text-muted">9 hours ago</span>
                                 </div>
                             </a>
                         </li>
                     </ul>
                     <div class="panel-footer">
-                        <a href="javascript:;">Show all mails.</a>
+                        <a href="javascript:;">Show all messages.</a>
                     </div>
                 </div>
             </li>
@@ -231,12 +196,129 @@
                     </div>
                 </div>
             </li>
-            <li>
-                <a href="#/tasks/tasks" class="bg-danger" id="step3">
-                    <i class="fa fa-tasks"></i>
+            <li >
+                <div class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="images/g1.jpg" alt="" style="height: 40px; width: 40px; margin-left: 10px; margin-top: 5px; margin-right: 10px" class="img-circle">
                 </a>
+                    <div class="dropdown-menu pull-right with-arrow panel panel-default">
+                        <div class="panel-heading" style="text-align: center">
+                            <span data-i18n="Ikem Okonkwo"></span>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a ui-sref="a.profile.basic">
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span class="round-icon sm bg-success"><i class="fa fa-edit"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span data-i18n="Edit Profile"></span>
+                                                </li>
+                                            </ul>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#/members/{{main.name}}/profile">
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span class="round-icon sm bg-info"><i class="fa fa-user"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span data-i18n="View Profile"></span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+
+
+
+                            </li>
+
+                            <li class="list-group-item">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#/members/{{main.name}}/groups">
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span class="round-icon sm bg-primary"><i class="fa fa-group"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span data-i18n="My Groups"></span>
+                                                </li>
+                                            </ul>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#/members/{{main.name}}/shelf">
+
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span class="round-icon sm bg-success"><i class="fa fa-book"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span data-i18n="My Shelf"></span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+
+                            <li class="list-group-item">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#/members/{{main.name}}/works">
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span class="round-icon sm bg-danger"><i class="fa fa-pencil"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span data-i18n="My Works. "></span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#/members/{{main.name}}/members">
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span class="round-icon sm bg-info"><i class="fa fa-user"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span data-i18n="My Followers"></span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+
+
+                        </ul>
+                        <div class="panel-footer">
+
+                            <a  href="#/lock" class="btn btn-md btn-primary pull-left" style="margin-bottom: 10px; color:white">
+                                <i class="fa fa-lock"></i>
+                                <span data-i18n="Lock"></span>
+                            </a>
+                            <a href="#/login" class="btn btn-md btn-primary pull-right" style="margin-bottom: 10px; color:white">
+                                <i class="fa fa-sign-out"></i>
+                                <span data-i18n="Log Out"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </li>
-        </ul>-->
+        </ul>
     </div>
 
 </header>
