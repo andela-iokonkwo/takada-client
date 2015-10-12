@@ -3,7 +3,7 @@
  */
 angular.module('news.service', [])
 .factory('allNews',['$http', function($http) {
-       var baseUrl = 'http://news-takada.azurewebsites.net/ghost/api/v0.1/';
+       var baseUrl = 'http://127.0.0.1:2368/ghost/api/v0.1/';
 
         return {
             tag : null,
