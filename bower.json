@@ -10,6 +10,7 @@
     "angular-route": "~1.2.0",
     "angular-animate": "~1.2.0",
     "angular-ui-router": "~0.2.10",
+    "angular-ui-select": "~0.13.2",
     "font-awesome": "~4.1.0",
     "toastr": "~2.0.1",
     "seiyria-bootstrap-slider": "~1.9.0",
